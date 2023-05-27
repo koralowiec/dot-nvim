@@ -23,6 +23,6 @@ require("luasnip").filetype_extend("all", { "_" })
 -- https://github.com/orgs/community/discussions/8105
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
-vim.keymap.set("i", "<C-H>", 'copilot#Accept("<CR>")', { desc = 'GitHub Copilot: accept', silent = true, expr = true })
+vim.keymap.set("i", "<C-H>", 'vim.api.nvim_put(copilot#Accept("<CR>"), "", true, true)', { desc = 'GitHub Copilot: accept', silent = true, expr = true })
 vim.keymap.set("i", "<C-K>", 'copilot#Previous()', { desc = 'GitHub Copilot: previous', silent = true, expr = true })
 vim.keymap.set("i", "<C-J>", 'copilot#Next()', { desc = 'GitHub Copilot: next', silent = true, expr = true })
