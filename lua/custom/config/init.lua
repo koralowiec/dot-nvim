@@ -24,6 +24,6 @@ require("luasnip").filetype_extend("all", { "_" })
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 -- Set keymap for <C-H> to accept the suggestion
-vim.keymap.set("i", "<C-H>", 'copilot#Accept()', { desc = 'GitHub Copilot: accept', silent = true, expr = true })
+vim.keymap.set("i", "<C-S>", 'copilot#Accept("<CR>")', { desc = 'GitHub Copilot: accept', silent = true, expr = true })
 vim.keymap.set("i", "<C-K>", 'copilot#Previous()', { desc = 'GitHub Copilot: previous', silent = true, expr = true })
 vim.keymap.set("i", "<C-J>", 'copilot#Next()', { desc = 'GitHub Copilot: next', silent = true, expr = true })
